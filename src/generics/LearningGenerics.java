@@ -56,15 +56,38 @@ public class LearningGenerics {
 //		Generics in MAP
 		Map<Integer, String> map = new HashMap<Integer, String>();
 		Integer key = new Integer(11);
-		String value = "person_name";
+		String value = "name1";
 		map.put(key, value);
+		map.put(12, "name2");
+		map.put(13,"name3");
 		
 		String val = map.get(key);
 		
 		System.out.println(val);
 		
+//		iterating map -- Key Iterator
+		Iterator<Integer> keyIterator = map.keySet().iterator();
+		while(keyIterator.hasNext()) {
+			Integer akey = keyIterator.next();
+			String aValue = map.get(akey);
+			System.out.println("Key: "+akey+", value: "+aValue);
+		}
+			
+//		iterating map -- Value Iterator
+		Iterator<String> valueIterator = map.values().iterator();
+		while(valueIterator.hasNext())
+			System.out.println(valueIterator.next());
 		
+//		for loop --  keySet
+		for(Integer keyInt : map.keySet()) {
+			String aVal = map.get(keyIterator);
+			System.out.println(""+ keyInt+":"+aVal);
+		}
 		
+//		for loop -- value
+		for(String strVal : map.values()) {
+			System.out.println(strVal);
+		}
 		
 		
 	}
