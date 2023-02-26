@@ -1,7 +1,7 @@
 package basics.non_static_management;
 
 public class B {
-	void test() {
+	static void test() {
 		
 	}
 	public static void main(String[] args) {
